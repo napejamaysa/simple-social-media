@@ -13,7 +13,8 @@ chmod -R ug+rwx bootstrap storage || true
 
 # Build frontend assets (tanpa dev server)
 npm install --legacy-peer-deps --no-audit --progress=false
-npm run build
+#npm run build
+npm run dev
 
 # Install PHP dependencies
 composer install --optimize-autoloader --no-interaction
