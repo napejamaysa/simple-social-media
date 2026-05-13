@@ -38,7 +38,7 @@ jobs:
         run: docker ps -a
 
   build-push-image:
-    needs: run-mysql-in-docker
+#    needs: run-mysql-in-docker
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
