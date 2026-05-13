@@ -29,7 +29,8 @@ RUN mkdir -p bootstrap/cache \
     chmod -R ug+rwx bootstrap storage
 
 # Jalankan install.sh (pastikan file ada)
-RUN chmod +x install.sh && ./install.sh
+#RUN chmod +x install.sh && ./install.sh
+RUN echo "Install.sh skipped for now"
 
 EXPOSE 8000
 
