@@ -30,15 +30,4 @@ php artisan key:generate --force
 sed -i 's/DB_HOST=127.0.0.1/DB_HOST=mysql/g' .env
 sed -i 's/DB_PASSWORD=/DB_PASSWORD=password/g' .env
 
-# Wait for database to be ready (opsional)
-echo "Waiting for database..."
-until php artisan migrate:status 2>/dev/null; do
-    echo "Database not ready, waiting 2 seconds..."
-    sleep 2
-done
-
-# Run migrations and seeders
-php artisan migrate --force
-php artisan db:seed --force
-
-echo "Installation completed!"
+echo "Installation completed! (migration will run at container startup)"
